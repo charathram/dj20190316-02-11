@@ -3,11 +3,6 @@ resource "heroku_app" "production" {
   name   = "${var.app_name}-prod"
   region = "us"
   stack  = "container"
-  organization = {
-    name = "${var.heroku_team}"
-    locked = "false"
-    personal = "false"
-  }
 }
 
 resource "heroku_addon" "database_production" {
